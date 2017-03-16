@@ -8,10 +8,10 @@ namespace HackathonProject
 {
     class DataAtTime
     {
-        DateTime dateTimeOfReading;
-        int reading;
+        string dateTimeOfReading;
+        string reading;
 
-        public DataAtTime(DateTime dateTimeOfReading, int reading) 
+        public DataAtTime(string dateTimeOfReading, string reading) 
         {
             this.dateTimeOfReading = dateTimeOfReading;
             this.reading = reading;

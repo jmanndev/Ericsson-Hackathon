@@ -32,6 +32,14 @@ namespace HackathonProject
             Room room = new Room(ID, waspID, peopleCounterID);
             rooms.AddLast(room);
         }
+
+        public void pollForBuildingData()
+        {
+            foreach(Room room in rooms)
+            {
+                room.pollForRoomData();
+            }
+        }
         
     }
 }

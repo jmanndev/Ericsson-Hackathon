@@ -8,12 +8,14 @@ namespace HackathonProject
 {
     class PeopleCounter : Sensor
     {
-        string baseURL = "http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/";
-
         public PeopleCounter (string ID) : base(ID)
+        {}
+
+        public void pollForData()
         {
-            string value = Utility.getRawJSon(baseURL + ID);
+            string value = Utility.getRawJSon("http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/" + ID);
+            base.pollForData();
         }
-        
+
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 
 namespace HackathonProject
@@ -12,36 +13,35 @@ namespace HackathonProject
     class Sensor
     {
         protected string ID { get; set; }
-        protected string latestSensorReading { get; set; }
+        protected LinkedList<DataAtTime> sensorReadings { get; set; }
+        protected string jsonData { get; set; }
 
         public Sensor(string ID)
         {
             this.ID = ID;
+            this.sensorReadings = new LinkedList<DataAtTime>();
         }
 
         protected string getJsonURL(string ID, string sensorCode, double pollTimeMins)
         {
             DateTime currentDateTime = DateTime.Now;
-            string baseURL = "https://eif-research.feit.uts.edu.au/api/json/?rFromDate=" + Utility.formatDateToString(currentDateTime.AddMinutes(-pollTimeMins).AddSeconds(-1)) + "&rToDate=" + Utility.formatDateToString(currentDateTime) + "&rFamily=wasp&rSensor=" + ID + "&rSubSensor=" + sensorCode;
+            string baseURL = "https://eif-research.feit.uts.edu.au/api/json/?rFromDate=" + Utility.formatDateToString(currentDateTime.AddMinutes(-4 * pollTimeMins).AddSeconds(-1)) + "&rToDate=" + Utility.formatDateToString(currentDateTime) + "&rFamily=wasp&rSensor=" + ID + "&rSubSensor=" + sensorCode;
 
             return baseURL;
         }
 
-
-        protected string parseSensorData(string sensorData)
+        protected void parseSensorData(string rawJsonData)
         {
-            //  regex pattern: \\\",\d*.\d*
-            string pattern = @"\\\"",\d *.\d *";
-            Regex regex = new Regex(pattern);
-            string value = "";
-
-            Match match = regex.Match(sensorData);
-            if (match.Success)
+            List<string[]> dataListArray = JsonConvert.DeserializeObject<List<string[]>>(rawJsonData);
+            foreach (string[] dataRow in dataListArray)
             {
-                value = match.Groups[1].Value;
+                sensorReadings.AddLast(new DataAtTime(dataRow.ElementAt(0), dataRow.ElementAt(1)));
             }
-            return value;
         }
 
+        public virtual void pollForData()
+        {
+
+        }
     }
 }

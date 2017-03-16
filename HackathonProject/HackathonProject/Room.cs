@@ -18,7 +18,15 @@ namespace HackathonProject
             this.roomID = ID;
             temperature = new Temperature(waspID);
             luminosity = new Luminosity(waspID);
-            //pc = new PeopleCounter(peopleCounterID);
+            pc = new PeopleCounter(peopleCounterID);
         }
+
+        public void pollForRoomData()
+        {
+            temperature.pollForData();
+            luminosity.pollForData();
+            pc.pollForData();
+        }
+
     }
 }
