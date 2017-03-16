@@ -48,16 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building.cs" />
-    <Compile Include="DataAtTime.cs" />
-    <Compile Include="Luminosity.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="Sensors\DataAtTime.cs" />
+    <Compile Include="Sensors\Luminosity.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Utility.cs" />
-    <Compile Include="Temperature.cs" />
+    <Compile Include="Sensors\Temperature.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="PeopleCounter.cs" />
+    <Compile Include="Sensors\PeopleCounter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sensor.cs" />
+    <Compile Include="Sensors\Sensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

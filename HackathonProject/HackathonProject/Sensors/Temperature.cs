@@ -11,11 +11,15 @@ namespace HackathonProject
     class Temperature : Sensor
     {
         public Temperature(string ID) : base(ID)
-        {}
+        {
+            Console.WriteLine("Creating temperature sensor " + ID);
+        }
 
         public override void pollForData()
         {
-            jsonData = Utility.getRawJSon(getJsonURL(ID, "TCA", 7.0));
+            Console.WriteLine("Polling for new data from temperature sensor " + ID);
+            jsonData = Utility.getRawJSon(getJsonURL("TCA", 7.0));
+            parseSensorData(jsonData);
             base.pollForData();
         }
     }

@@ -8,25 +8,46 @@ namespace HackathonProject
 {
     class Room
     {
-        string roomID;
-        Luminosity luminosity;
-        Temperature temperature;
-        PeopleCounter pc;
+        public string ID { get; set; }
+        List<Sensor> sensors = new List<Sensor>();
 
         public Room(string ID, string peopleCounterID, string waspID)
         {
-            this.roomID = ID;
-            temperature = new Temperature(waspID);
-            luminosity = new Luminosity(waspID);
-            pc = new PeopleCounter(peopleCounterID);
+            this.ID = ID;
+            sensors.Add(new Temperature(waspID));
+            sensors.Add(new Luminosity(waspID));
+            //sensors.Add(new PeopleCounter(peopleCounterID));
         }
 
-        public void pollForRoomData()
+        public void updateSensorReadings()
         {
-            temperature.pollForData();
-            luminosity.pollForData();
-            pc.pollForData();
+            pollForRoomData();
+            double adjustment = (int)getLuminositySensor().getLuxAdjustment();
         }
 
+        private void pollForRoomData()
+        {
+            Console.WriteLine("Polling room " + ID + " for latest data");
+            foreach (Sensor sensor in sensors)
+            {
+                sensor.pollForData();
+            }
+            Console.WriteLine("Polling room" + ID + " completed");
+        }
+
+        public Luminosity getLuminositySensor()
+        {
+            return (Luminosity)sensors.ElementAt(1);
+        }
+
+        public Temperature getTemperatureSensor()
+        {
+            return (Temperature)sensors.ElementAt(0);
+        }
+
+        public PeopleCounter getPeopleCounterSensor()
+        {
+            return (PeopleCounter)sensors.ElementAt(2);
+        }
     }
 }

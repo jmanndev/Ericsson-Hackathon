@@ -8,8 +8,8 @@ namespace HackathonProject
 {
     class DataAtTime
     {
-        string dateTimeOfReading;
-        string reading;
+        string dateTimeOfReading { get; }
+        public string reading { get; }
 
         public DataAtTime(string dateTimeOfReading, string reading) 
         {
