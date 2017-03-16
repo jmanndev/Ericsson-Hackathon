@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Jono</Author>
+  <LastAuthor>Jono</LastAuthor>
+  <Created>2017-03-16T04:06:25Z</Created>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11895</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="26" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Row>
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">API URL</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PCB101</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PCB101-LevelB1CenterPCLabs1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PCB102</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PCB102-LevelB1WesternPCLabs1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0005</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0005-WattleStreetWest1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0006</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0006-WattleStreetWest2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0007</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0007-WattleStB10Entrance</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0008</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0008-BroadwayWest2Stairs</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0009</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0009-BroadwayWest1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0111</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0111-CafeWest</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0112</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0112-StairsToLevel2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0113</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0113-PennyLaneExit</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0214</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0214-BroadwayEastEntrance</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0215</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0215-DataArena</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0216</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0216-JonesStEntrance</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0420</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0420-Classroom400</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0522</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0522-Level5StairsDown</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0523</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0523-Classroom200</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0825</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0825-CHTArea</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0926</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0926-CassArea</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0927</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0927-Level9StairsUp</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0928</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0928-Level9StairsDown</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC0929</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC0929-StaffCommonRoom</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC1030</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC1030-Level10BridgeEast</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC1131</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC1131-Level11BridgeEast</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC1132</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC1132-SchoolOfCivil</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PC1133</Data></Cell>
+    <Cell><Data ss:Type="String">http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/PC1133-Level11StairsUp</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>26</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

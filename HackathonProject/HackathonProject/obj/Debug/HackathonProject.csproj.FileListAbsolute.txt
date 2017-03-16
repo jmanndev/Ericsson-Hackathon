@@ -1,0 +1,6 @@
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Debug\HackathonProject.exe.config
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Debug\HackathonProject.exe
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Debug\HackathonProject.pdb
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.csprojResolveAssemblyReference.cache
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.exe
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.pdb
