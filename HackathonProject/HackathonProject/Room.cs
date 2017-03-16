@@ -9,13 +9,15 @@ namespace HackathonProject
     class Room
     {
         string roomID;
-        Temperature wasp;
+        Luminosity luminosity;
+        Temperature temperature;
         PeopleCounter pc;
 
         public Room(string ID, string peopleCounterID, string waspID)
         {
             this.roomID = ID;
-            wasp = new Temperature(waspID);
+            temperature = new Temperature(waspID);
+            luminosity = new Luminosity(waspID);
             //pc = new PeopleCounter(peopleCounterID);
         }
     }

@@ -48,7 +48,7 @@
     <Compile Include="Luminosity.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Utility.cs" />
-    <Compile Include="Waspmost.cs" />
+    <Compile Include="Temperature.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="PeopleCounter.cs" />
     <Compile Include="Program.cs" />

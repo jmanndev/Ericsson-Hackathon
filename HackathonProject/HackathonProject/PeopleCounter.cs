@@ -9,7 +9,6 @@ namespace HackathonProject
     class PeopleCounter : Sensor
     {
         string baseURL = "http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/";
-        LinkedList<DataAtTime> peopleCounterReadings = new LinkedList<DataAtTime>();
 
         public PeopleCounter (string ID) : base(ID)
         {
