@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class Temperature : Sensor
+    class Luminosity : Sensor
     {
+        LinkedList<DataAtTime> luminosityReadings = new LinkedList<DataAtTime>();
 
-        LinkedList<DataAtTime> temperatureReadings = new LinkedList<DataAtTime>();
-
-        public Temperature(string ID) : base(ID)
-        { 
-            string temp = Utility.getRawJSon(getJsonURL(ID, "TCA"));
+        public Luminosity(string ID) : base(ID)
+        {
+            string lumin = Utility.getRawJSon(getJsonURL(ID, "LUM"));
         }
 
         private string getJsonURL(string ID, string sensorCode)
         {
             DateTime currentDateTime = DateTime.Now;
             string baseURL = "https://eif-research.feit.uts.edu.au/api/json/?rFromDate=" + Utility.formatDateToString(currentDateTime.AddMinutes(-7).AddSeconds(-1)) + "&rToDate=" + Utility.formatDateToString(currentDateTime) + "&rFamily=wasp&rSensor=" + ID + "&rSubSensor=" + sensorCode;
-            
+
             return baseURL;
         }
     }

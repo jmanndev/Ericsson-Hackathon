@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    public class Sensor
+    class Sensor
     {
-        protected int ID { get; set; }
+        protected string ID { get; set; }
 
-        public Sensor(int ID)
+        public Sensor(string ID)
         {
             this.ID = ID;
         }
+
     }
 }

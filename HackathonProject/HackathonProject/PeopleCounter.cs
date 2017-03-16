@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    public class PeopleCounter : Sensor
+    class PeopleCounter : Sensor
     {
+        string baseURL = "http://hummingbird.feit.uts.edu.au:8080/peopleCounterApi/live/";
+        LinkedList<DataAtTime> peopleCounterReadings = new LinkedList<DataAtTime>();
 
-        public PeopleCounter (int ID) : base(ID)
+        public PeopleCounter (string ID) : base(ID)
         {
-
+            string value = Utility.getRawJSon(baseURL + ID);
         }
+        
     }
 }
