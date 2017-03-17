@@ -3,3 +3,13 @@ C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProjec
 C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Release\HackathonProject.pdb
 C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.exe
 C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.pdb
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Release\Newtonsoft.Json.dll
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Release\Newtonsoft.Json.xml
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.Properties.Resources.resources
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.RoomForm.resources
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.csproj.GenerateResource.Cache
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Release\HackathonProject.exe.manifest
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Release\HackathonProject.application
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.csprojResolveAssemblyReference.cache
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.exe.manifest
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Release\HackathonProject.application

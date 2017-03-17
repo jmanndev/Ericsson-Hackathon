@@ -9,17 +9,26 @@ namespace HackathonProject
 {
     class Program
     {
+        static Building build;
         static void Main(string[] args)
 
         {
-            Main main = new HackathonProject.Main();
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 420000; // 7 minutes in milliseconds
+            timer.Elapsed += timer_Elapsed;
+            timer.Start();
 
-            Building build = new Building("test");
+            build = new Building("DemoBuilding");
             build.pollForBuildingData();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new RoomForm(build));
+        }
+
+        static void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            build.pollForBuildingData();
         }
     }
 }
