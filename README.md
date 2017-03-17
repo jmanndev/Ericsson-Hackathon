@@ -1,7 +1,7 @@
 # Requirements
 - API integration of UTS sensors - https://eif-research.feit.uts.edu.au/
 - Innovative
-- Solution can be marketted
+- Solution can be marketed
 
 # Our Solution
 - eco-CTL (economic/ecofriendly climate temperature lighting system)
