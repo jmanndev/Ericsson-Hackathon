@@ -9,6 +9,8 @@ namespace HackathonProject
     public class Room
     {
         public string ID { get; set; }
+
+        bool peopleSensorEnabled = false;
         public PeopleCounter peopleCounter { get; set; }
         public Temperature temperatureSensor { get; set; }
         public Luminosity luminositySensor { get; set; }
@@ -20,15 +22,21 @@ namespace HackathonProject
             this.ID = ID;
             temperatureSensor =  new Temperature(waspID, "TEMP", "Temperature Control");
             luminositySensor = new Luminosity(waspID, "LUM", "Luminosity Control");
-            peopleCounter = new PeopleCounter(peopleCounterID, "PEOP");
+
+            if (peopleSensorEnabled)
+                peopleCounter = new PeopleCounter(peopleCounterID, "PEOP");
         }
 
         public void updateSensorReadings()
         {
             pollForRoomData();
-            peopleInRoom = peopleCounter.getCurrentPeopleCount();
-            updateDevicesInRoom();
 
+            if (peopleSensorEnabled)
+                peopleCounter.getCurrentPeopleCount();
+            else
+                peopleInRoom = 2;
+
+            updateDevicesInRoom();
         }
 
         private void updateDevicesInRoom()
@@ -44,7 +52,10 @@ namespace HackathonProject
         private void pollForRoomData()
         {
             Console.WriteLine("Polling room " + ID + " for latest data");
-            peopleCounter.pollForData();
+
+            if (peopleSensorEnabled)
+                peopleCounter.pollForData();
+
             temperatureSensor.pollForData();
             luminositySensor.pollForData();
             Console.WriteLine("Polling room" + ID + " completed");

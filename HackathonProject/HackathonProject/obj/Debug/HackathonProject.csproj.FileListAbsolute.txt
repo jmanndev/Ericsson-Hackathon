@@ -9,3 +9,7 @@ C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProjec
 C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.RoomForm.resources
 C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.csproj.GenerateResource.Cache
 C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.Properties.Resources.resources
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Debug\HackathonProject.exe.manifest
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\bin\Debug\HackathonProject.application
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.exe.manifest
+C:\Users\Jono\Coding\Ericsson Hackathon\Project\HackathonProject\HackathonProject\obj\Debug\HackathonProject.application
