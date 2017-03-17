@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class Luminosity : Sensor
+    class Luminosity : WaspMote
     {
         /* https://www.noao.edu/education/QLTkit/ACTIVITY_Documents/Safety/LightLevels_outdoor+indoor.pdf
          * 
@@ -21,11 +21,13 @@ namespace HackathonProject
          */
 
         int idealLuxLevel;
+        public LightControl connectedDevice;
 
 
-        public Luminosity(string ID, int idealLuxLevel = 500) : base(ID)
+        public Luminosity(string ID, string deviceType,  string connectedDeviceName, int idealLuxLevel = 500) : base(ID, deviceType)
         {
             Console.WriteLine("Creating luminosity sensor " + ID + " with ideal setting at " + idealLuxLevel);
+            connectedDevice = new LightControl(connectedDeviceName);
             this.idealLuxLevel = idealLuxLevel;
         }
 
@@ -35,6 +37,22 @@ namespace HackathonProject
             jsonData = Utility.getRawJSon(getJsonURL("LUM", 7.0));
             parseSensorData(jsonData);
             base.pollForData();
+        }
+
+        public override void updateDeviceSettings()
+        {
+            string command = "";
+            double lightingAdjustment = getLuxAdjustment();
+
+            command = "Increase lighting by " + lightingAdjustment.ToString() + " LUX";
+
+            connectedDevice.lightSetting = lightingAdjustment;
+            sendCommandToDevice(command);
+        }
+
+        private void sendCommandToDevice(string command)
+        {
+            connectedDevice.sendDeviceCommand(command);
         }
 
         public double getLuxAdjustment()

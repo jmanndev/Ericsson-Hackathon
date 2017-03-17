@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class Device
+    class ThermostatControl : Device
     {
-        string name;
-
-        public Device(string name)
-        {
-            this.name = name;
-        }
-
-
-
+        public double temperatureSetting { get; set; }
+        public ThermostatControl(string name) : base(name)
+        { }
     }
 }

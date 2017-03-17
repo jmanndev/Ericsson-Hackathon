@@ -9,45 +9,45 @@ namespace HackathonProject
     class Room
     {
         public string ID { get; set; }
-        List<Sensor> sensors = new List<Sensor>();
+        PeopleCounter peopleCounter;
+        Temperature temperatureSensor;
+        Luminosity luminositySensor;
+
+        int peopleInRoom = 0;
 
         public Room(string ID, string peopleCounterID, string waspID)
         {
             this.ID = ID;
-            sensors.Add(new Temperature(waspID));
-            sensors.Add(new Luminosity(waspID));
-            //sensors.Add(new PeopleCounter(peopleCounterID));
+            temperatureSensor =  new Temperature(waspID, "TEMP", "Temperature Control");
+            luminositySensor = new Luminosity(waspID, "LUM", "Luminosity Control");
+            peopleCounter = new PeopleCounter(peopleCounterID, "PEOP");
         }
 
         public void updateSensorReadings()
         {
             pollForRoomData();
-            double adjustment = (int)getLuminositySensor().getLuxAdjustment();
+            peopleInRoom = peopleCounter.getCurrentPeopleCount();
+            updateDevicesInRoom();
+
+        }
+
+        private void updateDevicesInRoom()
+        {
+            Console.WriteLine("Updating device settings in room " + ID);
+            temperatureSensor.calculateTemperatureAdjustment(peopleInRoom);
+            temperatureSensor.updateDeviceSettings();
+            luminositySensor.updateDeviceSettings();
+            Console.WriteLine("Device settings in room" + ID + " updated");
+
         }
 
         private void pollForRoomData()
         {
             Console.WriteLine("Polling room " + ID + " for latest data");
-            foreach (Sensor sensor in sensors)
-            {
-                sensor.pollForData();
-            }
+            peopleCounter.pollForData();
+            temperatureSensor.pollForData();
+            luminositySensor.pollForData();
             Console.WriteLine("Polling room" + ID + " completed");
-        }
-
-        public Luminosity getLuminositySensor()
-        {
-            return (Luminosity)sensors.ElementAt(1);
-        }
-
-        public Temperature getTemperatureSensor()
-        {
-            return (Temperature)sensors.ElementAt(0);
-        }
-
-        public PeopleCounter getPeopleCounterSensor()
-        {
-            return (PeopleCounter)sensors.ElementAt(2);
         }
     }
 }
