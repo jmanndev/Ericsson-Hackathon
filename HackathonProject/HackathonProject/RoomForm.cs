@@ -25,6 +25,11 @@ namespace HackathonProject
 
         private void roomDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
+            updateRoomData();
+        }
+
+        public void updateRoomData()
+        {
             selectedRoom = (Room)roomDropDown.SelectedValue;
             lightingTextBox.Text = selectedRoom.luminositySensor.getLuxAdjustment().ToString("F") + " Lux";
             temperatureTextBox.Text = selectedRoom.temperatureSensor.getTemperatureAdjustment().ToString("F") + " C";

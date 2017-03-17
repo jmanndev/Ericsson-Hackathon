@@ -10,8 +10,9 @@ namespace HackathonProject
     class Program
     {
         static Building build;
+        static RoomForm roomForm;
+        
         static void Main(string[] args)
-
         {
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 420000; // 7 minutes in milliseconds
@@ -23,12 +24,15 @@ namespace HackathonProject
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RoomForm(build));
+            roomForm = new RoomForm(build);
+            Application.Run(roomForm);
+
         }
 
         static void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             build.pollForBuildingData();
+            roomForm.updateRoomData();
         }
     }
 }
