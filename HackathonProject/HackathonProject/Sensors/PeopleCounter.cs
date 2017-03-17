@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace HackathonProject
 {
-    class PeopleCounter : Sensor
+    public class PeopleCounter : Sensor
     {
         public PeopleCounterReading reading { get; set; }
 

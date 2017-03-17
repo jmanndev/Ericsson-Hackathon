@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class Sensor
+    public class Sensor
     {
         protected string ID { get; }
         public string deviceType { get; set; }

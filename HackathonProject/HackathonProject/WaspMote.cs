@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class WaspMote : Sensor
+    public class WaspMote : Sensor
     {
         public WaspMote(string ID, string deviceType) : base(ID, deviceType)
         { }

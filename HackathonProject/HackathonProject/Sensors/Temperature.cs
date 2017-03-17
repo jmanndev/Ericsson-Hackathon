@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace HackathonProject
 {
-    class Temperature : WaspMote
+    public class Temperature : WaspMote
     {
         int idealTempLevel;
         public ThermostatControl connectedDevice;
@@ -47,6 +47,11 @@ namespace HackathonProject
         private void sendCommandToDevice(string command)
         {
             connectedDevice.sendDeviceCommand(command);
+        }
+
+        public double getTemperatureAdjustment()
+        {
+            return temperatureAdjustment;
         }
     }
 }

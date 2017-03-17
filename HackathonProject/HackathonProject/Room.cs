@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class Room
+    public class Room
     {
         public string ID { get; set; }
-        PeopleCounter peopleCounter;
-        Temperature temperatureSensor;
-        Luminosity luminositySensor;
+        public PeopleCounter peopleCounter { get; set; }
+        public Temperature temperatureSensor { get; set; }
+        public Luminosity luminositySensor { get; set; }
 
-        int peopleInRoom = 0;
+        public int peopleInRoom = 0;
 
         public Room(string ID, string peopleCounterID, string waspID)
         {

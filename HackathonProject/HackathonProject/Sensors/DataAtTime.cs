@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class DataAtTime
+    public class DataAtTime
     {
         string dateTimeOfReading { get; }
         public string reading { get; }

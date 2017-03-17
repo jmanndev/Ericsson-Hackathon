@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class Device
+    public class Device
     {
         public string name { get; set; }
 

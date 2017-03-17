@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class Building
+    public class Building
     {
         string ID;
-        LinkedList<Room> rooms = new LinkedList<Room>();
+        public List<Room> rooms = new List<Room>();
 
         public Building(string ID)
         {
@@ -36,7 +36,7 @@ namespace HackathonProject
         private void addRoom(string roomID, string waspID, string peopleCounterID)
         {
             Room room = new Room(roomID, waspID, peopleCounterID);
-            rooms.AddLast(room);
+            rooms.Add(room);
         }
 
         public void pollForBuildingData()

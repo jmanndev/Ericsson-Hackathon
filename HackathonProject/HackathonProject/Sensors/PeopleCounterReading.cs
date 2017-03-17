@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class PeopleCounterReading
+    public class PeopleCounterReading
     {
         public string serial { get; set; }
         public string name { get; set; }
@@ -17,7 +17,9 @@ namespace HackathonProject
 
         public int getCurrentPeopleCount()
         {
-            return @in - @out;
+            if (@in - @out > 0)
+                return @in - @out;
+            else return 0;
         }
     }
 }

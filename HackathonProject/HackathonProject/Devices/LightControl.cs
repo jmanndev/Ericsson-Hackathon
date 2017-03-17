@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackathonProject
 {
-    class LightControl : Device
+    public class LightControl : Device
     {
         public double lightSetting {get;set;}
 

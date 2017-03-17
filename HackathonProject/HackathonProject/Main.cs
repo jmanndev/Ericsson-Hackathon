@@ -22,13 +22,5 @@ namespace HackathonProject
 
         }
 
-        public void start()
-        {
-            Building build = new Building("test");
-            build.pollForBuildingData();
-            
-            
-        }
-
     }
 }
