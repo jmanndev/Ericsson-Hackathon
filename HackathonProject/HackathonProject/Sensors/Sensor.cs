@@ -14,7 +14,7 @@ namespace HackathonProject
     {
         protected string ID { get; }
         public string deviceType { get; set; }
-        protected LinkedList<DataAtTime> sensorReadings { get; set; }
+        public LinkedList<DataAtTime> sensorReadings { get; set; }
         protected string jsonData { get; set; }
         public string latestReading { get; set; }
 
@@ -54,6 +54,11 @@ namespace HackathonProject
 
         public virtual void updateDeviceSettings()
         { }
+
+        public string getLastPollTime()
+        {
+            return sensorReadings.Last().dateTimeOfReading;
+        }
 
     }
 }

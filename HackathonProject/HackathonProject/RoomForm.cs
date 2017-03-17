@@ -29,6 +29,8 @@ namespace HackathonProject
             lightingTextBox.Text = selectedRoom.luminositySensor.getLuxAdjustment().ToString("F") + " Lux";
             temperatureTextBox.Text = selectedRoom.temperatureSensor.getTemperatureAdjustment().ToString("F") + " C";
             peopleInRoomLabel.Text = "People in room: " + selectedRoom.peopleInRoom;
+            lightingLastPollTimeLabel.Text = selectedRoom.luminositySensor.sensorReadings.Last().getDateOfReading().ToShortTimeString();
+            temperatureLastPollTimeLabel.Text = selectedRoom.temperatureSensor.sensorReadings.Last().getDateOfReading().ToShortTimeString();
         }
     }
 }

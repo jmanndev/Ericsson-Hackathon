@@ -8,6 +8,8 @@ namespace HackathonProject
 {
     public class WaspMote : Sensor
     {
+        protected double pollingRate = 7.0;
+
         public WaspMote(string ID, string deviceType) : base(ID, deviceType)
         { }
 

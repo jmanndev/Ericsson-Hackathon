@@ -24,7 +24,7 @@ namespace HackathonProject
         public override void pollForData()
         {
             Console.WriteLine("Polling for new data from temperature sensor " + ID);
-            jsonData = Utility.getRawJSon(getJsonURL("TCA", 7.0));
+            jsonData = Utility.getRawJSon(getJsonURL("TCA", pollingRate));
             parseSensorData(jsonData);
             base.pollForData();
         }

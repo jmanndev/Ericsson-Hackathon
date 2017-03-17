@@ -8,13 +8,18 @@ namespace HackathonProject
 {
     public class DataAtTime
     {
-        string dateTimeOfReading { get; }
+        public string dateTimeOfReading { get; }
         public string reading { get; }
 
         public DataAtTime(string dateTimeOfReading, string reading) 
         {
             this.dateTimeOfReading = dateTimeOfReading;
             this.reading = reading;
+        }
+
+        public DateTime getDateOfReading()
+        {
+            return DateTime.Parse(dateTimeOfReading);
         }
     }
 }

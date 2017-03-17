@@ -37,6 +37,8 @@
             this.tempLabel = new System.Windows.Forms.TextBox();
             this.LightingLabel = new System.Windows.Forms.TextBox();
             this.peopleInRoomLabel = new System.Windows.Forms.TextBox();
+            this.lightingLastPollTimeLabel = new System.Windows.Forms.TextBox();
+            this.temperatureLastPollTimeLabel = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 59);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 70);
             this.pictureBox1.TabIndex = 1;
@@ -61,7 +63,7 @@
             // 
             // lightingTextBox
             // 
-            this.lightingTextBox.Location = new System.Drawing.Point(90, 94);
+            this.lightingTextBox.Location = new System.Drawing.Point(90, 78);
             this.lightingTextBox.Name = "lightingTextBox";
             this.lightingTextBox.ReadOnly = true;
             this.lightingTextBox.Size = new System.Drawing.Size(94, 20);
@@ -70,7 +72,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 161);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 147);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 70);
             this.pictureBox2.TabIndex = 3;
@@ -78,7 +80,7 @@
             // 
             // temperatureTextBox
             // 
-            this.temperatureTextBox.Location = new System.Drawing.Point(90, 180);
+            this.temperatureTextBox.Location = new System.Drawing.Point(90, 166);
             this.temperatureTextBox.Name = "temperatureTextBox";
             this.temperatureTextBox.ReadOnly = true;
             this.temperatureTextBox.Size = new System.Drawing.Size(94, 20);
@@ -87,7 +89,7 @@
             // tempLabel
             // 
             this.tempLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tempLabel.Location = new System.Drawing.Point(90, 161);
+            this.tempLabel.Location = new System.Drawing.Point(90, 147);
             this.tempLabel.Name = "tempLabel";
             this.tempLabel.ReadOnly = true;
             this.tempLabel.Size = new System.Drawing.Size(118, 13);
@@ -97,7 +99,7 @@
             // LightingLabel
             // 
             this.LightingLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LightingLabel.Location = new System.Drawing.Point(90, 75);
+            this.LightingLabel.Location = new System.Drawing.Point(90, 59);
             this.LightingLabel.Name = "LightingLabel";
             this.LightingLabel.ReadOnly = true;
             this.LightingLabel.Size = new System.Drawing.Size(118, 13);
@@ -107,17 +109,35 @@
             // peopleInRoomLabel
             // 
             this.peopleInRoomLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.peopleInRoomLabel.Location = new System.Drawing.Point(14, 41);
+            this.peopleInRoomLabel.Location = new System.Drawing.Point(14, 40);
             this.peopleInRoomLabel.Name = "peopleInRoomLabel";
             this.peopleInRoomLabel.ReadOnly = true;
-            this.peopleInRoomLabel.Size = new System.Drawing.Size(194, 13);
+            this.peopleInRoomLabel.Size = new System.Drawing.Size(170, 13);
             this.peopleInRoomLabel.TabIndex = 7;
+            // 
+            // lightingLastPollTimeLabel
+            // 
+            this.lightingLastPollTimeLabel.Location = new System.Drawing.Point(90, 104);
+            this.lightingLastPollTimeLabel.Name = "lightingLastPollTimeLabel";
+            this.lightingLastPollTimeLabel.ReadOnly = true;
+            this.lightingLastPollTimeLabel.Size = new System.Drawing.Size(94, 20);
+            this.lightingLastPollTimeLabel.TabIndex = 8;
+            // 
+            // temperatureLastPollTimeLabel
+            // 
+            this.temperatureLastPollTimeLabel.Location = new System.Drawing.Point(90, 192);
+            this.temperatureLastPollTimeLabel.Name = "temperatureLastPollTimeLabel";
+            this.temperatureLastPollTimeLabel.ReadOnly = true;
+            this.temperatureLastPollTimeLabel.Size = new System.Drawing.Size(94, 20);
+            this.temperatureLastPollTimeLabel.TabIndex = 9;
             // 
             // RoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(225, 260);
+            this.Controls.Add(this.temperatureLastPollTimeLabel);
+            this.Controls.Add(this.lightingLastPollTimeLabel);
             this.Controls.Add(this.peopleInRoomLabel);
             this.Controls.Add(this.LightingLabel);
             this.Controls.Add(this.tempLabel);
@@ -145,5 +165,7 @@
         private System.Windows.Forms.TextBox tempLabel;
         private System.Windows.Forms.TextBox LightingLabel;
         private System.Windows.Forms.TextBox peopleInRoomLabel;
+        private System.Windows.Forms.TextBox lightingLastPollTimeLabel;
+        private System.Windows.Forms.TextBox temperatureLastPollTimeLabel;
     }
 }

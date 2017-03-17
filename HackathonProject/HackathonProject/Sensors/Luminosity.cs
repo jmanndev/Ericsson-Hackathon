@@ -34,7 +34,7 @@ namespace HackathonProject
         public override void pollForData()
         {
             Console.WriteLine("Polling for new data from luminosity sensor " + ID);
-            jsonData = Utility.getRawJSon(getJsonURL("LUM", 7.0));
+            jsonData = Utility.getRawJSon(getJsonURL("LUM", pollingRate));
             parseSensorData(jsonData);
             base.pollForData();
         }
